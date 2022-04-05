@@ -50,8 +50,8 @@ jobs:
           CC=gcc CGO_ENABLED=1 GOOS=linux GOARCH=386 go build -o alidrive_uploader_linux_386/alidrive main.go
       - name: compress
         run: |
-          ls | awk '{ print "cp example.config.yaml "$0"/example.config.yaml"}'
-          ls | grep 'linux' | awk '{ print "tar zcvf "$0".tar.gz " $0}'
+          ls | grep "alidrive_uploader_" | awk '{ cp example.config.yaml $0/example.config.yaml }'
+          ls | grep 'linux' | awk '{ tar zcvf "$0".tar.gz $0}'
           zip -r alidrive_uploader_windows_amd64.zip alidrive_uploader_windows_amd64
 
       - name: Build Changelog
