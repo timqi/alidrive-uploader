@@ -51,7 +51,7 @@ jobs:
 
       - name: Copy additional files
         run: |
-          ls | awk '{ print "cp example.config.yaml $0}'
+          ls | awk '{ print "cp example.config.yaml "$0 }'
 
       - name: Upload artifacts linux_amd64
         uses: actions/upload-artifact@v2
