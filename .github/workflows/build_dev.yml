@@ -57,28 +57,28 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: alidrive_uploader_linux_amd64
-          path: alidrive_uploader_linux_amd64/
+          path: ./alidrive_uploader_linux_amd64
 
       - name: Upload artifacts linux_arm64
         uses: actions/upload-artifact@v3
         with:
           name: alidrive_uploader_linux_arm64
-          path: alidrive_uploader_linux_arm64/
+          path: ./alidrive_uploader_linux_arm64
 
       - name: Upload artifacts linux_arm
         uses: actions/upload-artifact@v3
         with:
           name: alidrive_uploader_linux_arm
-          path: alidrive_uploader_linux_arm/
+          path: ./alidrive_uploader_linux_arm
 
       - name: Upload artifacts windows_amd64
         uses: actions/upload-artifact@v3
         with:
           name: alidrive_uploader_windows_amd64
-          path: alidrive_uploader_windows_amd64/
+          path: ./alidrive_uploader_windows_amd64
 
       - name: Upload artifacts linux_386
         uses: actions/upload-artifact@v3
         with:
           name: alidrive_uploader_linux_386
-          path: alidrive_uploader_linux_386/
+          path: ./alidrive_uploader_linux_386
