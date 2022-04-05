@@ -52,6 +52,9 @@ jobs:
       - name: Copy additional files
         run: |
           ls |grep "alidrive_uploader_" | awk '{ print "cp example.config.yaml "$0"/example.config.yaml" }'
+          ls alidrive_uploader_linux_amd64
+          ls alidrive_uploader_linux_arm
+          ls alidrive_uploader_windows_amd64
 
       - name: Upload artifacts linux_amd64
         uses: actions/upload-artifact@v2
@@ -63,26 +66,22 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: alidrive_uploader_linux_arm64
-          path: alidrive_uploader_linux_arm64/*
+          path: alidrive_uploader_linux_arm64
 
       - name: Upload artifacts linux_arm
         uses: actions/upload-artifact@v2
         with:
           name: alidrive_uploader_linux_arm
-          path: |
-            alidrive_uploader_linux_arm/alidrive
-            alidrive_uploader_linux_arm/example.yaml
+          path: alidrive_uploader_linux_arm
 
       - name: Upload artifacts windows_amd64
         uses: actions/upload-artifact@v2
         with:
           name: alidrive_uploader_windows_amd64
-          path: |
-            alidrive_uploader_windows_amd64/alidrive
-            alidrive_uploader_windows_amd64/*.yaml
+          path: alidrive_uploader_windows_amd64
 
       - name: Upload artifacts linux_386
         uses: actions/upload-artifact@v2
         with:
           name: alidrive_uploader_linux_386
-          path: alidrive_uploader_linux_386/*
+          path: alidrive_uploader_linux_386
