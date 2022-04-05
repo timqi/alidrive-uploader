@@ -52,6 +52,7 @@ jobs:
       - name: Copy additional files
         run: |
           ls |grep "alidrive_uploader_" | awk '{ print "cp example.config.yaml "$0"/example.config.yaml" }'
+          ls
           ls alidrive_uploader_linux_amd64
           ls alidrive_uploader_linux_arm
           ls alidrive_uploader_windows_amd64
