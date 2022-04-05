@@ -45,16 +45,13 @@ Install()
 {
 	Uninstall
 	rm -rf $install_path
-	echo '正在安装阿里云盘上传工具...'
+	echo '正在下载阿里云盘上传工具...'
   CORE_DOWNLOAD_URL=$(curl -fsSL https://api.github.com/repos/aoaostar/alidrive-uploader/releases/latest | grep "browser_download_url.*$OS.*$ARCH" | cut -d '"' -f 4)
   curl -L "$CORE_DOWNLOAD_URL" | tar -xz
-  mv `ls | grep "alidrive_uploader"` $install_path/core
-	cp $install_path/icon.png $panel_path/BTPanel/static/img/soft_ico/ico-alidrive.png
-	cp $install_path/core/example.config.yaml $install_path/core/config.yaml
 	#依赖安装结束
 	#==================================================================
 	echo '================================================'
-	echo '阿里云盘上传工具安装完成'
+	echo '阿里云盘上传工具下载完成'
 }
 # 更新
 Update()
